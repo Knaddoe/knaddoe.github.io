@@ -1,8 +1,8 @@
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
 - jekyll-remote-theme
-title: Title
-tagline: Tagline
-description: Description
+title: Throndev's Homepage
+tagline: developing games
+description: hi!
 show_downloads: false
-google_analytics:
+#google_analytics:

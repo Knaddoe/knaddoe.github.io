@@ -1,0 +1,128 @@
+﻿/* comentario en css */
+@import url('https://fonts.cdnfonts.com/css/belinda');
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+#introductionText {
+    font-size: 1.8vw;
+    font-family: Verdana, serif;
+    text-align: justify;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+#introGreeting{
+    text-align: center;
+    font-family: 'Belinda', serif;
+    font-size: 2.5vw;
+}
+
+/* Intro Check my Portfolio button */
+
+button#introCheckPortfolio {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+button#introCheckPortfolio:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button#introCheckPortfolio:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* Intro Instagram Redirect */
+/* From Uiverse.io by satyamchaudharydev */
+button#introInstagramRedirect {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button#introInstagramRedirect {
+    --primary-color: white;
+    --hovered-color: #c84747;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+button#introInstagramRedirect p {
+    margin: 0;
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+button#introInstagramRedirect::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+button#introInstagramRedirect p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "@throndev";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+button#introInstagramRedirect:hover::after {
+    width: 100%;
+}
+
+button#introInstagramRedirect:hover p::before {
+    width: 100%;
+}
+
+button#introInstagramRedirect:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+button#introInstagramRedirect svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}

@@ -1,13 +1,9 @@
-﻿/* comentario en css */
-@import url('https://fonts.cdnfonts.com/css/belinda');
+﻿@import url('https://fonts.cdnfonts.com/css/belinda');
+@import "background.css";
 
-body {
-    background-color: black;
-    font-family: sans-serif;
-    color: white;
-}
 h1{
     text-align: center;
+    font-family:  sans-serif;
 }
 a{
     text-decoration: none;
@@ -24,11 +20,14 @@ a{
     font-family: 'Belinda', serif;
     font-size: 2.5vw;
 }
+#itchHyperlink:hover{
+    cursor: pointer;
+}
 
 /* Intro Check my Portfolio button */
 
 button#introCheckPortfolio {
-    padding: 17px 40px;
+    padding: 13px 20px;
     border-radius: 50px;
     cursor: pointer;
     border: 0;
@@ -36,7 +35,7 @@ button#introCheckPortfolio {
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 1.5vw;
     transition: all 0.5s ease;
 }
 
@@ -67,8 +66,8 @@ button#introInstagramRedirect {
 }
 
 button#introInstagramRedirect {
-    --primary-color: white;
-    --hovered-color: #c84747;
+    --primary-color: #63b1db;
+    --hovered-color: hsl(261deg 80% 48%);
     position: relative;
     display: flex;
     font-weight: 600;
@@ -126,3 +125,4 @@ button#introInstagramRedirect svg {
     width: 15px;
     transition-delay: 0.2s;
 }
+/****/

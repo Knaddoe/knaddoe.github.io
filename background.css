@@ -1,0 +1,6 @@
+﻿body {
+    background: #210d29;
+    background: linear-gradient(0deg, rgba(33, 13, 41, 1) 0%, rgba(0, 0, 0, 1) 42%);
+    font-family: sans-serif;
+    color: white;
+}

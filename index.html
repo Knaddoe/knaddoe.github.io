@@ -6,11 +6,20 @@
     <link rel="stylesheet" href="indexStyle.css">
 </head>
 <body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+</div>
+
 <h1>About me</h1>
+
 <p id="introGreeting">Hello!</p>
 
+<img id="introPicture" src="Images/throndev_pp.png" alt="Throndev's profile picture">
+
 <p id="introductionText">
-    My name is Daniel Mauro, also known as “Throndev.”
+    My name is Daniel Mauro, also known as “Throndev.” <br>
     I am a programmer and artist specializing in the development of both VR and non-VR games.
     I approach every project with professionalism, dedication, and a strong attention to detail.
     <br><br>
@@ -31,28 +40,39 @@
     
 <br>
 
-<!-- Instagram button -->
-<p>Instagram
-<a href="https://www.instagram.com/throndev/" target="_blank">
-    <!-- From Uiverse.io by satyamchaudharydev -->
-    <button id="introInstagramRedirect">
-        <p>@throndev</p>
-        <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="4"
-        >
-            <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-        </svg>
-    </button>
-</a>
-</p>
+<div class="Instagram-feed-widget" style="max-width: 100%; text-align: center;">
+    <!-- Instagram button -->
+    <p>Instagram
+        <a href="https://www.instagram.com/throndev/" target="_blank">
+            <!-- From Uiverse.io by satyamchaudharydev -->
+            <button id="introInstagramRedirect">
+                <p>@throndev</p>
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="4"
+                >
+                    <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                </svg>
+            </button>
+        </a>
+    </p>
+    <iframe
+            src="https://www.Instagram.com/throndev/embed"
+            width="700"
+            height="200"
+            allowtransparency="true"
+            style="border: thin #130c1c; overflow: hidden;">
+
+    </iframe>
+
+</div>
 
 <!-- Itch.io hyperlink -->
 <p>

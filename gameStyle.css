@@ -1,0 +1,133 @@
+﻿@import "header.css";
+@import "background.css";
+
+h1{
+    text-align: center;
+    font-family:  Verdana, serif;
+}
+
+#gameSubtitle {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.1vw;
+    margin-top: -1.5em;
+    margin-bottom: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Verdana, serif;
+}
+
+#gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.8em;
+    margin: 0 6vw 4em;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(178, 75, 209, 0.35);
+    border-color: rgba(178, 75, 209, 0.7);
+}
+
+.game-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+.game-thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #1a0a22, #2d1040);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.game-info {
+    padding: 1em 1.2em 1.2em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.game-title {
+    font-family: Verdana, serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #e0c8f0;
+    margin: 0;
+}
+.game-desc {
+    font-family: Verdana, serif;
+    font-size: 0.78em;
+    color: #bbb;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+}
+.game-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+.game-tag {
+    background: rgba(178, 75, 209, 0.2);
+    border: 1px solid rgba(178, 75, 209, 0.4);
+    color: #c87fe8;
+    font-size: 0.68em;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-family: Verdana, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.game-play-badge {
+    font-size: 0.68em;
+    color: #7ec87e;
+    font-family: Verdana, serif;
+    border: 1px solid rgba(126, 200, 126, 0.4);
+    padding: 2px 10px;
+    border-radius: 50px;
+}
+
+#itchFooter {
+    text-align: center;
+    margin: 0 0 3em;
+}
+#itchFooter a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 1px solid rgba(178, 75, 209, 0.5);
+    color: #c87fe8;
+    font-family: Verdana, serif;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+#itchFooter a:hover {
+    background: rgba(178, 75, 209, 0.15);
+    box-shadow: 0 0 20px rgba(178, 75, 209, 0.3);
+    border-color: rgba(178, 75, 209, 0.8);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    #gameSubtitle { font-size: 3vw; }
+    #gamesGrid { margin: 0 4vw 3em; gap: 1.2em; }
+}

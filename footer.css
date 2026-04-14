@@ -1,0 +1,23 @@
+﻿.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1.5em 2em;
+    margin-top: 4em;
+    border-top: 1px solid rgba(178, 75, 209, 0.2);
+    font-family: Verdana, serif;
+    font-size: 0.75em;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.footer a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #c87fe8;
+}

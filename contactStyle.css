@@ -1,0 +1,18 @@
+﻿@import "header.css";
+@import "background.css";
+
+h1{
+    text-align: center;
+    font-family:  Verdana, serif;
+}
+
+#contactSubtitle {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.1vw;
+    margin-top: -0.5em;
+    margin-bottom: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Verdana, serif;
+}

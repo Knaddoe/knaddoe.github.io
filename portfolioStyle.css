@@ -2,9 +2,9 @@
 @import "background.css";
 @import "footer.css";
 
-h1{
+h1 {
     text-align: center;
-    font-family:  Verdana, serif;
+    font-family: Verdana, serif;
 }
 
 #portfolioSubtitle {
@@ -16,4 +16,243 @@ h1{
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: Verdana, serif;
+}
+
+#projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.8em;
+    margin: 0 6vw 4em;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(178, 75, 209, 0.35);
+    border-color: rgba(178, 75, 209, 0.7);
+}
+
+.project-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.project-thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #1a0a22, #2d1040);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.project-info {
+    padding: 1em 1.2em 1.2em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.project-title {
+    font-family: Verdana, serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #e0c8f0;
+    margin: 0;
+}
+
+.project-desc {
+    font-family: Verdana, serif;
+    font-size: 0.78em;
+    color: #bbb;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+
+.project-tag {
+    background: rgba(178, 75, 209, 0.2);
+    border: 1px solid rgba(178, 75, 209, 0.4);
+    color: #c87fe8;
+    font-size: 0.68em;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-family: Verdana, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Caja de contenido */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0; 
+    background: rgba(10, 3, 15, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+/* Cuando se activa con JS */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Caja del modal */
+.modal-box {
+    position: relative;
+    background: linear-gradient(160deg, #1e0c28, #130820);
+    border: 1px solid rgba(178, 75, 209, 0.45);
+    border-radius: 16px;
+    padding: 2.5em 2.5em 2em;
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(100, 20, 160, 0.45);
+
+    /* Animación de entrada */
+    animation: modalFadeIn 0.25s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* Scrollbar del modal */
+.modal-box::-webkit-scrollbar { width: 5px; }
+.modal-box::-webkit-scrollbar-track { background: transparent; }
+.modal-box::-webkit-scrollbar-thumb { background: rgba(178, 75, 209, 0.4); border-radius: 10px; }
+
+/* Botón cerrar */
+.modal-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: transparent;
+    border: 1px solid rgba(178, 75, 209, 0.35);
+    color: #aaa;
+    font-size: 0.9em;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    border-color: rgba(178, 75, 209, 0.8);
+    color: white;
+    background: rgba(178, 75, 209, 0.15);
+}
+
+/* Optional image inside modal */
+.modal-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+    object-fit: cover;
+    max-height: 220px;
+    border: 1px solid rgba(178, 75, 209, 0.25);
+}
+
+/* Modal's title */
+.modal-title {
+    font-family: Verdana, serif;
+    font-size: 1.4em;
+    color: #e0c8f0;
+    margin: 0 0 0.2em;
+    padding-right: 2em; /* close button space */
+}
+
+/* Period / Company */
+.modal-period {
+    font-family: Verdana, serif;
+    font-size: 0.78em;
+    color: #888;
+    margin: 0 0 1.2em;
+    letter-spacing: 1px;
+}
+
+/* Tags inside modal */
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.6em;
+}
+
+/* Section titles inside modal */
+.modal-section-title {
+    font-family: Verdana, serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c87fe8;
+    margin: 1.4em 0 0.5em;
+    border-bottom: 1px solid rgba(178, 75, 209, 0.2);
+    padding-bottom: 0.4em;
+}
+
+/* text paragraph inside modal */
+.modal-text {
+    font-family: Verdana, serif;
+    font-size: 0.85em;
+    color: #bbb;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Skills list */
+.modal-skills-list {
+    font-family: Verdana, serif;
+    font-size: 0.85em;
+    color: #bbb;
+    line-height: 1.9;
+    padding-left: 1.4em;
+    margin: 0;
+}
+
+.modal-skills-list li::marker {
+    color: rgba(178, 75, 209, 0.7);
+}
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    #portfolioSubtitle { font-size: 3vw; }
+    #projectsGrid { margin: 0 4vw 3em; gap: 1.2em; }
+    .modal-box { padding: 1.8em 1.4em 1.4em; }
+    .modal-title { font-size: 1.1em; }
 }

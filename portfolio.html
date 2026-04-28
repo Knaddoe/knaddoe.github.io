@@ -19,9 +19,156 @@
 </div>
 
 <h1>Portfolio</h1>
-<p id="portfolioSubtitle">strengths and abilities</p>
+<p id="portfolioSubtitle">professional projects & experience</p>
 
-<div style="text-align: center">Under construction!</div>
+<!-- PROJECT GRID -->
+<div id="projectsGrid">
+
+    <!-- PROJECT BLOCK (Copy n paste 4 more blocks) -->
+    <div class="project-card" onclick="openModal('modal-1')">
+        <div class="project-thumb-placeholder">💼</div>
+        <!-- Si tienes imagen: reemplaza la línea de arriba por:
+        <img class="project-thumb" src="Images/tu_imagen.png" alt="Nombre del proyecto"> -->
+        <div class="project-info">
+            <p class="project-title">XPEDITIONVR: Cerro Castillo</p>
+            <p class="project-desc">Full body tracking & free roam VR experience.</p>
+            <div class="project-footer">
+                <span class="project-tag">C#</span>
+                <span class="project-tag">Unity</span>
+                <span class="project-tag">VR</span>
+                <span class="project-tag">Meta SDK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT BLOCK
+    <div class="project-card" onclick="openModal('modal-2')">
+        <div class="project-thumb-placeholder">🛠️</div>
+        <div class="project-info">
+            <p class="project-title">Otro Proyecto</p>
+            <p class="project-desc">Descripción breve del segundo proyecto profesional.</p>
+            <div class="project-footer">
+                <span class="project-tag">VR</span>
+                <span class="project-tag">C#</span>
+            </div>
+        </div>
+    </div>
+
+-->
+</div>
+
+<!-- MODALES — 1 modal by project.
+     has to coincide with the desired project modal -> openModal('modal-X'). -->
+
+<!-- MODAL 1 -->
+<div class="modal-overlay" id="modal-1" onclick="closeModalOnOverlay(event, 'modal-1')">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
+
+        <!-- Optional image -->
+        <!-- <img class="modal-image" src="Images/image.png" alt="Project's name"> -->
+
+        <h2 class="modal-title">XPEDITIONVR: Cerro Castillo</h2>
+        <p class="modal-period">Lucid Dreams · Nov 2024</p>
+
+        <div class="modal-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">VR</span>
+            <span class="project-tag">Meta SDK</span>
+        </div>
+
+        <h3 class="modal-section-title">About the project</h3>
+        <p class="modal-text">
+            Full body tracking & free roam VR experience aimed to work in a
+            real, physical location, aligning real world with a virtual environment
+            to generate maximum immersion.
+        </p>
+
+        <h3 class="modal-section-title">My Role</h3>
+        <p class="modal-text">
+            Using Unity, I implemented full-body tracking systems based on hand tracking and 
+            Pro Touch controllers, which were later deprecated after integrating Meta’s Movement SDK.
+            I also worked with spatial anchors for world alignment and initial setup, 
+            as well as 3D scanning of climbing holds.
+        </p>
+
+        <h3 class="modal-section-title">Skills Applied</h3>
+        <ul class="modal-skills-list">
+            <li>Integration of Meta Movement SDK</li>
+            <li>Spatial anchors for world alignment</li>
+            <li>3D scanning</li>
+            <li>VR standalone application optimization</li>
+            <li>Spline-based animation systems</li>
+            <li>Hand tracking rigging and setup</li>
+            <li>Audio implementation and sound design</li>
+        </ul>
+    </div>
+</div>
+
+<!-- MODAL 2 
+<div class="modal-overlay" id="modal-2" onclick="closeModalOnOverlay(event, 'modal-2')">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
+
+        <h2 class="modal-title">Otro Proyecto</h2>
+        <p class="modal-period">Empresa / Cliente · Mar 2023 – Dic 2023</p>
+
+        <div class="modal-tags">
+            <span class="project-tag">VR</span>
+            <span class="project-tag">C#</span>
+        </div>
+
+        <h3 class="modal-section-title">Sobre el proyecto</h3>
+        <p class="modal-text">
+            Descripción general del segundo proyecto.
+        </p>
+
+        <h3 class="modal-section-title">Mi aporte</h3>
+        <p class="modal-text">
+            Tu aporte específico en este proyecto.
+        </p>
+
+        <h3 class="modal-section-title">Habilidades aplicadas</h3>
+        <ul class="modal-skills-list">
+            <li>Habilidad 1</li>
+            <li>Habilidad 2</li>
+            <li>Habilidad 3</li>
+        </ul>
+    </div>
+</div>
+-->
+
+<script>
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // evita scroll del fondo
+    }
+
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Closes if outside the block was pressed
+    function closeModalOnOverlay(event, id) {
+        if (event.target === event.currentTarget) {
+            closeModal(id);
+        }
+    }
+
+    // Closes with Esc key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    });
+</script>
 
 </body>
 <footer class="footer">

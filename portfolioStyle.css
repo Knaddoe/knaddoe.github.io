@@ -179,11 +179,10 @@ h1 {
 
 /* Optional image inside modal */
 .modal-image {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
     border-radius: 8px;
-    margin-bottom: 1.5em;
-    object-fit: cover;
-    max-height: 220px;
     border: 1px solid rgba(178, 75, 209, 0.25);
 }
 
@@ -254,6 +253,7 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 0.8em;
     margin-top: 0.4em;
+    justify-items: center;
 }
 
 .modal-gallery-img {

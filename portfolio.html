@@ -33,7 +33,7 @@
             <div class="project-footer">
                 <span class="project-tag">C#</span>
                 <span class="project-tag">Unity</span>
-                <span class="project-tag">VR</span>
+                <span class="project-tag">XR</span>
                 <span class="project-tag">Meta SDK</span>
             </div>
         </div>
@@ -48,8 +48,23 @@
             <div class="project-footer">
                 <span class="project-tag">C#</span>
                 <span class="project-tag">Unity</span>
-                <span class="project-tag">VR</span>
+                <span class="project-tag">XR</span>
                 <span class="project-tag">Meta SDK</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="project-card" onclick="openModal('modal-3')">
+        <img class="project-thumb" src="Images/totemPpl.jpeg" alt="App Asesor Financiero">
+        <div class="project-info">
+            <p class="project-title">Asesor Financiero Scotiabank</p>
+            <p class="project-desc">Educational app for Scotiabank's branch in KidZania.</p>
+            <div class="project-footer">
+                <span class="project-tag">C#</span>
+                <span class="project-tag">Unity</span>
+                <span class="project-tag">2D</span>
+                <span class="project-tag">Educational</span>
             </div>
         </div>
     </div>
@@ -70,7 +85,7 @@
         <div class="modal-tags">
             <span class="project-tag">C#</span>
             <span class="project-tag">Unity</span>
-            <span class="project-tag">VR</span>
+            <span class="project-tag">XR</span>
             <span class="project-tag">Meta SDK</span>
         </div>
 
@@ -159,7 +174,7 @@
         <div class="modal-tags">
             <span class="project-tag">C#</span>
             <span class="project-tag">Unity</span>
-            <span class="project-tag">VR</span>
+            <span class="project-tag">XR</span>
             <span class="project-tag">Meta SDK</span>
         </div>
 
@@ -191,7 +206,7 @@
         <div class="modal-gallery">
 
             <!-- Normal Image -->
-            <img class="modal-image" src="Images/LollaXPED.jpg" alt="XPEDITION:Cerro Castillo">
+            <img class="modal-image" src="Images/LollaXPED.jpg" alt="XPEDITION:Misión Espacial">
 
             <div class="modal-gallery-video horizontal">
                 <iframe
@@ -202,32 +217,56 @@
                 </iframe>
             </div>
 
-            <img class="modal-image" src="Images/In-Editor_SpaceXped.jpg" alt="XPEDITION:Cerro Castillo">
-            
-            <!-- Local Video (.mp4) IF AVAILABLE IN PROJECT'S FILES
-                 controls  → show buttons: play/pause/volume
-                 muted     → starts without sound
-                 loop      → loops when finished         -->
-            <!--
-            <video class="modal-gallery-video" controls muted loop>
-                <source src="Videos/video.mp4" type="video/mp4">
-            </video>
-            -->
+            <img class="modal-image" src="Images/In-Editor_SpaceXped.jpg" alt="XPEDITION:Misión Espacial">
+        </div>
+    </div>
+</div>
 
-            <!-- YOUTUBE VIDEO
-                 Copy video URL: https://www.youtube.com/watch?v=XXXXXXXX
-                 The id comes after "?v="  →  Video_ID      -->
-            <!--
-            <div class="modal-gallery-yt">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID"
-                    title="Project's video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
+<!-- MODAL 3 -->
+<div class="modal-overlay" id="modal-3" onclick="closeModalOnOverlay(event, 'modal-3')">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
+
+        <h2 class="modal-title">Asesor Financiero Scotiabank</h2>
+        <p class="modal-period">Independent · Jan 2025</p>
+
+        <div class="modal-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">2D</span>
+            <span class="project-tag">Educational</span>
+        </div>
+
+        <h3 class="modal-section-title">About the project</h3>
+        <p class="modal-text">
+            An educational application for KidZania designed to teach children 
+            the basics of financial literacy through interactive experiences.
+        </p>
+
+        <h3 class="modal-section-title">My Role</h3>
+        <p class="modal-text">
+            Full development of an application for an interactive kiosk installed at
+            the Scotiabank branch in KidZania. Developed in Unity, including animation,
+            UI design and implementation, a virtual keyboard system, and email delivery of the
+            player's profile.
+        </p>
+
+        <h3 class="modal-section-title">Skills Applied</h3>
+        <ul class="modal-skills-list">
+            <li>UI/UX design and interface systems</li>
+            <li>Interactive Kiosk development</li>
+            <li>Virtual input systems</li>
+            <li>Player data management</li>
+        </ul>
+
+        <!-- ── MULTIMEDIA - Optional section ── -->
+        <h3 class="modal-section-title">Multimedia</h3>
+        <div class="modal-gallery">
+
+            <!-- Normal Image -->
+            <img class="modal-image" src="Images/inside%20app.jpg" alt="Asesor Financiero Scotiabank">
+            <img class="modal-image" src="Images/totemApp.jpg" alt="Asesor Financiero Scotiabank">
+            <img class="modal-image" src="Images/inside%20app2.jpg" alt="Asesor Financiero Scotiabank">
         </div>
     </div>
 </div>

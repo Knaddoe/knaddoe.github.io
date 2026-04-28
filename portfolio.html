@@ -39,20 +39,21 @@
         </div>
     </div>
 
-    <!-- PROJECT BLOCK
+
     <div class="project-card" onclick="openModal('modal-2')">
-        <div class="project-thumb-placeholder">🛠️</div>
+        <img class="project-thumb" src="Images/Dia2_Lolla.jpg" alt="XPEDITION:Misión Espacial">
         <div class="project-info">
-            <p class="project-title">Otro Proyecto</p>
-            <p class="project-desc">Descripción breve del segundo proyecto profesional.</p>
+            <p class="project-title">XPEDITIONVR: Misión Espacial</p>
+            <p class="project-desc">Full body tracking & free roam VR experience at Lollapalooza.</p>
             <div class="project-footer">
-                <span class="project-tag">VR</span>
                 <span class="project-tag">C#</span>
+                <span class="project-tag">Unity</span>
+                <span class="project-tag">VR</span>
+                <span class="project-tag">Meta SDK</span>
             </div>
         </div>
     </div>
-
--->
+    
 </div>
 
 <!-- MODALES — 1 modal by project.
@@ -106,9 +107,9 @@
             <!-- Normal Image -->
             <img class="modal-image" src="Images/xped%203.jpeg" alt="XPEDITION:Cerro Castillo">
             
-            <div class="modal-gallery-yt">
+            <div class="modal-gallery-video horizontal">
                 <iframe
-                        src="https://www.youtube.com/embed/D61b4_pcZlA?autoplay=1&mute=1&rel=0"
+                        src="https://www.youtube.com/embed/D61b4_pcZlA?autoplay=1&mute=1&rel=0&loop=1&controls=0&modestbranding=1"
                         title="Project's video"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -146,38 +147,90 @@
     </div>
 </div>
 
-<!-- MODAL 2 
+
+<!-- MODAL 2 -->
 <div class="modal-overlay" id="modal-2" onclick="closeModalOnOverlay(event, 'modal-2')">
     <div class="modal-box">
         <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
 
-        <h2 class="modal-title">Otro Proyecto</h2>
-        <p class="modal-period">Empresa / Cliente · Mar 2023 – Dic 2023</p>
+        <h2 class="modal-title">XPEDITIONVR: Misión Espacial</h2>
+        <p class="modal-period">Lucid Dreams · Mar 2025</p>
 
         <div class="modal-tags">
-            <span class="project-tag">VR</span>
             <span class="project-tag">C#</span>
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">VR</span>
+            <span class="project-tag">Meta SDK</span>
         </div>
 
-        <h3 class="modal-section-title">Sobre el proyecto</h3>
+        <h3 class="modal-section-title">About the project</h3>
         <p class="modal-text">
-            Descripción general del segundo proyecto.
+            Full body tracking & free roam VR experience in collaboration with
+            Banco de Chile, presented at the VIP Zone at Lollapalooza Chile 2025.
         </p>
 
-        <h3 class="modal-section-title">Mi aporte</h3>
+        <h3 class="modal-section-title">My Role</h3>
         <p class="modal-text">
-            Tu aporte específico en este proyecto.
+            Using Unity, I implemented full-body tracking systems based on hand tracking
+            while integrating Meta’s Movement SDK. I also worked with spatial anchors for 
+            world alignment and connected vibration motors through a local network.
         </p>
 
-        <h3 class="modal-section-title">Habilidades aplicadas</h3>
+        <h3 class="modal-section-title">Skills Applied</h3>
         <ul class="modal-skills-list">
-            <li>Habilidad 1</li>
-            <li>Habilidad 2</li>
-            <li>Habilidad 3</li>
+            <li>Integration of Meta Movement SDK</li>
+            <li>Spatial anchors for world alignment</li>
+            <li>VR standalone application optimization</li>
+            <li>Spline-based animation systems</li>
+            <li>Hand tracking rigging and setup</li>
+            <li>Audio implementation and sound design</li>
         </ul>
+
+        <!-- ── MULTIMEDIA - Optional section ── -->
+        <h3 class="modal-section-title">Multimedia</h3>
+        <div class="modal-gallery">
+
+            <!-- Normal Image -->
+            <img class="modal-image" src="Images/LollaXPED.jpg" alt="XPEDITION:Cerro Castillo">
+
+            <div class="modal-gallery-video horizontal">
+                <iframe
+                        src="https://player.vimeo.com/video/1076230232?h=202d7baee8&autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&loop=1"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <img class="modal-image" src="Images/In-Editor_SpaceXped.jpg" alt="XPEDITION:Cerro Castillo">
+            
+            <!-- Local Video (.mp4) IF AVAILABLE IN PROJECT'S FILES
+                 controls  → show buttons: play/pause/volume
+                 muted     → starts without sound
+                 loop      → loops when finished         -->
+            <!--
+            <video class="modal-gallery-video" controls muted loop>
+                <source src="Videos/video.mp4" type="video/mp4">
+            </video>
+            -->
+
+            <!-- YOUTUBE VIDEO
+                 Copy video URL: https://www.youtube.com/watch?v=XXXXXXXX
+                 The id comes after "?v="  →  Video_ID      -->
+            <!--
+            <div class="modal-gallery-yt">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Project's video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            -->
+        </div>
     </div>
 </div>
--->
 
 <script>
     function openModal(id) {

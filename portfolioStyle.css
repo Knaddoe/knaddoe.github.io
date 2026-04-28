@@ -107,7 +107,7 @@ h1 {
 }
 
 
-/* Caja de contenido */
+/* Semi-transparent bkg */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -120,12 +120,12 @@ h1 {
     padding: 2em;
 }
 
-/* Cuando se activa con JS */
+/* When JS activated */
 .modal-overlay.active {
     display: flex;
 }
 
-/* Caja del modal */
+/* Modal's box */
 .modal-box {
     position: relative;
     background: linear-gradient(160deg, #1e0c28, #130820);
@@ -138,7 +138,7 @@ h1 {
     overflow-y: auto;
     box-shadow: 0 20px 60px rgba(100, 20, 160, 0.45);
 
-    /* Animación de entrada */
+    /* In Animation */
     animation: modalFadeIn 0.25s ease;
 }
 
@@ -147,12 +147,12 @@ h1 {
     to   { opacity: 1; transform: translateY(0)    scale(1);    }
 }
 
-/* Scrollbar del modal */
+/* Modal's scrollbar */
 .modal-box::-webkit-scrollbar { width: 5px; }
 .modal-box::-webkit-scrollbar-track { background: transparent; }
 .modal-box::-webkit-scrollbar-thumb { background: rgba(178, 75, 209, 0.4); border-radius: 10px; }
 
-/* Botón cerrar */
+/* Close button */
 .modal-close {
     position: absolute;
     top: 1em;
@@ -248,6 +248,44 @@ h1 {
     color: rgba(178, 75, 209, 0.7);
 }
 
+/* Images gallery at the foot of the modal */
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.8em;
+    margin-top: 0.4em;
+}
+
+.modal-gallery-img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+.modal-gallery-img:hover {
+    border-color: rgba(178, 75, 209, 0.65);
+    transform: scale(1.02);
+}
+
+/* Youtube videos */
+.modal-gallery-yt iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+.modal-gallery-yt {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    overflow: hidden;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {

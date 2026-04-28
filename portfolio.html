@@ -26,9 +26,7 @@
 
     <!-- PROJECT BLOCK (Copy n paste 4 more blocks) -->
     <div class="project-card" onclick="openModal('modal-1')">
-        <div class="project-thumb-placeholder">💼</div>
-        <!-- Si tienes imagen: reemplaza la línea de arriba por:
-        <img class="project-thumb" src="Images/tu_imagen.png" alt="Nombre del proyecto"> -->
+        <img class="project-thumb" src="Images/xped%201.jpeg" alt="XPEDITION:Cerro Castillo">
         <div class="project-info">
             <p class="project-title">XPEDITIONVR: Cerro Castillo</p>
             <p class="project-desc">Full body tracking & free roam VR experience.</p>
@@ -65,9 +63,6 @@
     <div class="modal-box">
         <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
 
-        <!-- Optional image -->
-        <!-- <img class="modal-image" src="Images/image.png" alt="Project's name"> -->
-
         <h2 class="modal-title">XPEDITIONVR: Cerro Castillo</h2>
         <p class="modal-period">Lucid Dreams · Nov 2024</p>
 
@@ -103,6 +98,51 @@
             <li>Hand tracking rigging and setup</li>
             <li>Audio implementation and sound design</li>
         </ul>
+
+        <!-- ── MULTIMEDIA - Optional section ── -->
+        <h3 class="modal-section-title">Multimedia</h3>
+        <div class="modal-gallery">
+
+            <!-- Normal Image -->
+            <img class="modal-image" src="Images/xped%203.jpeg" alt="XPEDITION:Cerro Castillo">
+            
+            <div class="modal-gallery-yt">
+                <iframe
+                        src="https://www.youtube.com/embed/D61b4_pcZlA?autoplay=1&mute=1&rel=0"
+                        title="Project's video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <img class="modal-image" src="Images/xped%202.jpg" alt="XPEDITION:Cerro Castillo">
+            
+            <!-- Local Video (.mp4) IF AVAILABLE IN PROJECT'S FILES
+                 controls  → show buttons: play/pause/volume
+                 muted     → starts without sound
+                 loop      → loops when finished         -->
+            <!--
+            <video class="modal-gallery-video" controls muted loop>
+                <source src="Videos/video.mp4" type="video/mp4">
+            </video>
+            -->
+
+            <!-- YOUTUBE VIDEO
+                 Copy video URL: https://www.youtube.com/watch?v=XXXXXXXX
+                 The id comes after "?v="  →  Video_ID      -->
+            <!--
+            <div class="modal-gallery-yt">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Project's video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            -->
+        </div>
     </div>
 </div>
 

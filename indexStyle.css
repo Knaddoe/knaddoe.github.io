@@ -88,3 +88,377 @@ button#introContact:active {
     transform: translateY(10px);
     transition: 100ms;
 }
+
+/* Featured Project Section */
+#featuredProject {
+    margin: 4em 8vw 3em;
+    padding: 2.5em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    border-radius: 16px;
+}
+
+#featuredTitle {
+    text-align: center;
+    font-family: Verdana, serif;
+    font-size: 2em;
+    color: #e0c8f0;
+    margin: 0 0 0.3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#featuredContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-top: 2em;
+}
+
+#featuredMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#featuredMainVideo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: 1px solid rgba(178, 75, 209, 0.3);
+    overflow: hidden;
+    background: #000;
+}
+
+#featuredMainVideo iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+#featuredMainImage {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(178, 75, 209, 0.3);
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.featured-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.featured-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.featured-gallery img:hover {
+    transform: scale(1.05);
+    border-color: rgba(178, 75, 209, 0.6);
+}
+
+#featuredInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-project-title {
+    font-family: Verdana, serif;
+    font-size: 1.6em;
+    color: #e0c8f0;
+    margin: 0 0 0.3em;
+}
+
+.featured-period {
+    font-family: Verdana, serif;
+    font-size: 0.9em;
+    color: #888;
+    margin: 0 0 1em;
+    letter-spacing: 1px;
+}
+
+.featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.project-tag {
+    background: rgba(178, 75, 209, 0.2);
+    border: 1px solid rgba(178, 75, 209, 0.4);
+    color: #c87fe8;
+    font-size: 0.75em;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-family: Verdana, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-section-title {
+    font-family: Verdana, serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c87fe8;
+    margin: 1.2em 0 0.5em;
+    border-bottom: 1px solid rgba(178, 75, 209, 0.2);
+    padding-bottom: 0.4em;
+}
+
+.featured-text {
+    font-family: Verdana, serif;
+    font-size: 0.95em;
+    color: #bbb;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.featured-skills-list {
+    font-family: Verdana, serif;
+    font-size: 0.95em;
+    color: #bbb;
+    line-height: 1.9;
+    padding-left: 1.5em;
+    margin: 0;
+}
+
+.featured-skills-list li::marker {
+    color: rgba(178, 75, 209, 0.7);
+}
+
+#viewAllProjectsBtn {
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(178, 75, 209, 0.6);
+    background-color: transparent;
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    font-family: Verdana, serif;
+}
+
+#viewAllProjectsBtn:hover {
+    letter-spacing: 2px;
+    background-color: rgba(178, 75, 209, 0.3);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+/* Responsive Design for Featured Project */
+@media (max-width: 900px) {
+    #featuredContent {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    #featuredProject {
+        margin: 3em 4vw 2em;
+        padding: 1.5em;
+    }
+
+    #featuredTitle {
+        font-size: 1.5em;
+    }
+}
+
+/* Featured Game Section */
+#featuredGame {
+    margin: 4em 8vw 3em;
+    padding: 2.5em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    border-radius: 16px;
+}
+
+#featuredGameTitle {
+    text-align: center;
+    font-family: Verdana, serif;
+    font-size: 2em;
+    color: #e0c8f0;
+    margin: 0 0 0.3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#featuredGameContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-top: 2em;
+}
+
+#featuredGameMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#featuredGameMainImage {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(178, 75, 209, 0.3);
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.featured-game-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.featured-game-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(178, 75, 209, 0.25);
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.featured-game-gallery img:hover {
+    transform: scale(1.05);
+    border-color: rgba(178, 75, 209, 0.6);
+}
+
+#featuredGameInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-game-title {
+    font-family: Verdana, serif;
+    font-size: 1.6em;
+    color: #e0c8f0;
+    margin: 0 0 0.3em;
+}
+
+.featured-game-period {
+    font-family: Verdana, serif;
+    font-size: 0.9em;
+    color: #888;
+    margin: 0 0 1em;
+    letter-spacing: 1px;
+}
+
+.featured-game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.game-tag {
+    background: rgba(178, 75, 209, 0.2);
+    border: 1px solid rgba(178, 75, 209, 0.4);
+    color: #c87fe8;
+    font-size: 0.75em;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-family: Verdana, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-game-section-title {
+    font-family: Verdana, serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c87fe8;
+    margin: 1.2em 0 0.5em;
+    border-bottom: 1px solid rgba(178, 75, 209, 0.2);
+    padding-bottom: 0.4em;
+}
+
+.featured-game-text {
+    font-family: Verdana, serif;
+    font-size: 0.95em;
+    color: #bbb;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.featured-game-features-list {
+    font-family: Verdana, serif;
+    font-size: 0.95em;
+    color: #bbb;
+    line-height: 1.9;
+    padding-left: 1.5em;
+    margin: 0;
+}
+
+.featured-game-features-list li::marker {
+    color: rgba(178, 75, 209, 0.7);
+}
+
+#playGameBtn {
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    color: #000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    font-family: Verdana, serif;
+    font-weight: bold;
+}
+
+#playGameBtn:hover {
+    letter-spacing: 2px;
+    background-color: hsl(261deg 80% 48%);
+    color: white;
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+#viewAllGamesBtn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(178, 75, 209, 0.5);
+    background-color: transparent;
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+    font-family: Verdana, serif;
+}
+
+#viewAllGamesBtn:hover {
+    letter-spacing: 2px;
+    background-color: rgba(178, 75, 209, 0.2);
+    box-shadow: rgb(93 24 220) 0px 5px 20px 0px;
+}
+
+/* Responsive Design for Featured Game */
+@media (max-width: 900px) {
+    #featuredGameContent {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    #featuredGame {
+        margin: 3em 4vw 2em;
+        padding: 1.5em;
+    }
+
+    #featuredGameTitle {
+        font-size: 1.5em;
+    }
+}

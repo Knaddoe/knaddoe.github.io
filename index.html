@@ -59,54 +59,56 @@
     <div id="featuredContent">
         <div id="featuredMedia">
             <div id="featuredMainVideo">
-                <iframe
-                        src="https://www.youtube.com/embed/D61b4_pcZlA?autoplay=1&mute=1&rel=0&loop=1&controls=1&modestbranding=1&playlist=D61b4_pcZlA"
-                        title="XPEDITION: Cerro Castillo"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
+                <video class="modal-gallery-video horizontal" autoplay muted loop>
+                    <source src="Videos/AP_SneakPeek.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="featured-gallery">
-                <img src="Images/xped%203.jpeg" alt="XPEDITION: Cerro Castillo">
-                <img src="Images/xped%202.jpg" alt="XPEDITION: Cerro Castillo">
+                <img src="Images/AP_pasilloPadre.jpg" alt="Almas Perdidas: Father's Hallway">
+                <img src="Images/AP_piezaHija.jpeg" alt="Almas Perdidas: Daguther's Bedroom">
             </div>
         </div>
 
         <div id="featuredInfo">
-            <h3 class="featured-project-title">XPEDITIONVR: Cerro Castillo</h3>
-            <p class="featured-period">Lucid Dreams · Nov 2024</p>
+            <h3 class="featured-project-title">Almas Perdidas</h3>
+            <p class="featured-period">Lucid Dreams · Jun 2026</p>
 
             <div class="featured-tags">
                 <span class="project-tag">C#</span>
                 <span class="project-tag">Unity</span>
                 <span class="project-tag">XR</span>
                 <span class="project-tag">Meta SDK</span>
+                <span class="project-tag">Public Event</span>
+                <span class="project-tag">Multiplayer</span>
             </div>
 
             <h4 class="featured-section-title">About the project</h4>
             <p class="featured-text">
-                Full body tracking & free roam VR experience aimed to work in a
-                real, physical location, aligning real world with a virtual environment
-                to generate maximum immersion.
+                A Suspense-horror, two-player coop, full body tracking & free roam VR Experience presented at Metropolitan Santiago.
+                <br><br>· For more info you can
+                <a href="https://luciddreams.cl/especiales/almas-perdidas-metropolitan/?gad_source=1&gad_campaignid=23941389007&gclid=CjwKCAjwgO7RBhBKEiwAZNP85tzHN6O8WyGX0ElPkMv0gG-pOr3XI-boBztteLAxBdbZTX7adcnzARoCs9AQAvD_BwE"
+                   target="_blank"
+                   style="color: rgba(178, 75, 209, 1); text-decoration: none;">
+                    go to site</a>
             </p>
 
             <h4 class="featured-section-title">My Role</h4>
             <p class="featured-text">
-                Using Unity, I implemented full-body tracking systems based on hand tracking and
-                Pro Touch controllers, which were later deprecated after integrating Meta's Movement SDK.
-                I also worked with spatial anchors for world alignment and initial setup,
-                as well as 3D scanning of climbing holds.
+                I developed the full experience using Unity and Meta's SDKs. This experience was designed to be played by two players,
+                with the goal of finding the missing pieces of the story, allowing them to explore physically and interact with various objects to solve
+                puzzles and challenges. The player's progress is tracked by an admin app for windows that allows the operator
+                to control the game scenes and acts as a server for the multiplayer experience. The estimated duration of the game is 25 minutes, including a
+                5-minute induction explanation.
             </p>
 
             <h4 class="featured-section-title">Skills Applied</h4>
             <ul class="featured-skills-list">
                 <li>Integration of Meta Movement SDK</li>
+                <li>Integration of Interaction SDK</li>
+                <li>Local Multiplayer using NGO</li>
                 <li>Spatial anchors for world alignment</li>
-                <li>3D scanning</li>
                 <li>VR standalone application optimization</li>
-                <li>Spline-based animation systems</li>
                 <li>Hand tracking rigging and setup</li>
                 <li>Audio implementation and sound design</li>
             </ul>

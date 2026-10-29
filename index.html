@@ -1,9 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Throndev Game Developer</title>
-    <link rel="stylesheet" href="indexStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Throndev · Game programmer and artist</title>
+    <meta name="description" content="Portfolio of Daniel Mauro, also known as Throndev, game programmer and artist.">
+    <meta property="og:title" content="Throndev · Game programmer and artist">
+    <meta property="og:description" content="Portfolio of Daniel Mauro, also known as Throndev, game programmer and artist.">
+    <meta property="og:image" content="https://knaddoe.github.io/Images/AP_BosquePostal.jpeg">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Images/favicon-32x32.ico">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="Images/favicon-16x16.ico">
@@ -11,179 +19,121 @@
 
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
-<h1>About me</h1>
+<header class="nav">
+    <a class="wordmark" href="index.html">Throndev</a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="portfolio.html">Work</a>
+        <a href="games.html">Games</a>
+        <a href="index.html#about">About</a>
+        <a class="button" href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<p id="introGreeting">Hello!</p>
+<main id="main">
 
-<img id="introPicture" src="Images/throndev_pp.png" alt="Throndev's profile picture">
-
-<p id="introductionText">
-    My name is Daniel Mauro, also known as “Throndev.” <br>
-    I am a <b><span style="color: #22c7cc">game programmer and artist</span></b> specializing in the development of both VR and non-VR games.
-    <br><br>
-    I am passionate about creating worlds and narratives
-    that immerse audiences in symbolism 
-    and strive to deliver <b><span style="color: #22c7cc">meaningful experiences</span></b>.
-    <br><br> 
-    Feel free to <b><span style="color: #22c7cc">reach out</span></b> to me for collaboration or just to say hi!
-    <br><br>
-</p>
-
-<!-- Contact principal Button -->
-<div style="text-align: center">
-    <a href="contact.html">
-        <button id="introContact">Contact</button>
-    </a>
-</div>
-
-<div id="orSubtitle">or maybe</div>
-
-<!-- Portfolio secondary Button -->
-<div style="text-align: center; margin-top: 0.3em">
-    <a href="portfolio.html">
-        <button id="introCheckPortfolio">Check my Portfolio</button>
-    </a>
-</div>
-
-<!-- Featured Project Section -->
-<section id="featuredProject">
-    <h2 id="featuredTitle">Featured Project</h2>
-
-    <div id="featuredContent">
-        <div id="featuredMedia">
-            <div id="featuredMainVideo">
-                <video class="modal-gallery-video horizontal" autoplay muted loop>
+    <section class="grid hero">
+        <div class="hero-copy">
+            <h1 data-rise>Hi, I'm Daniel Mauro</h1>
+            <p class="hero-sub" data-rise style="--i:1">Game programmer and artist, also known as Throndev.</p>
+            <div class="hero-actions" data-rise style="--i:2">
+                <a class="button" href="portfolio.html">Work</a>
+                <a class="button button--ghost" href="games.html">Games</a>
+            </div>
+        </div>
+        <div class="hero-media bezel" data-rise style="--i:2">
+            <div class="bezel-core">
+                <video autoplay muted loop playsinline poster="Images/AP_BosquePostal.jpeg" aria-label="Sneak peek of Almas Perdidas, a free-roam VR experience">
                     <source src="Videos/AP_SneakPeek.mp4" type="video/mp4">
                 </video>
-            </div>
-
-            <div class="featured-gallery">
-                <img src="Images/AP_pasilloPadre.jpg" alt="Almas Perdidas: Father's Hallway">
-                <img src="Images/AP_piezaHija.jpeg" alt="Almas Perdidas: Daguther's Bedroom">
+                <p class="hero-caption">Almas Perdidas</p>
             </div>
         </div>
+    </section>
 
-        <div id="featuredInfo">
-            <h3 class="featured-project-title">Almas Perdidas</h3>
-            <p class="featured-period">Lucid Dreams · Jun 2026</p>
+    <section class="section" id="work">
+        <div class="grid section-head">
+            <h2 data-reveal>Featured work</h2>
+        </div>
+        <div class="cards cards--3" data-render="work-cards"></div>
+        <p class="more" data-reveal><a class="button button--ghost" href="portfolio.html">See more</a></p>
+    <noscript><p class="empty">This list needs JavaScript. Everything is also on <a class="text-link" href="https://throndev.itch.io/">itch.io</a> and <a class="text-link" href="https://www.linkedin.com/in/daniel-mauro-dev/">LinkedIn</a>.</p></noscript>
+    </section>
 
-            <div class="featured-tags">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">XR</span>
-                <span class="project-tag">Meta SDK</span>
-                <span class="project-tag">Public Event</span>
-                <span class="project-tag">Multiplayer</span>
+    <section class="section" id="games">
+        <div class="grid section-head">
+            <h2 data-reveal>Personal games and prototypes</h2>
+        </div>
+        <div class="cards cards--4" data-render="game-cards"></div>
+        <p class="more" data-reveal><a class="button button--ghost" href="games.html">See more</a></p>
+    </section>
+
+    <section class="section grid" id="about">
+        <div class="about bezel" data-reveal>
+            <div class="bezel-core">
+                <img src="Images/throndev_pp.png" alt="Throndev's pixel-art portrait" width="276" height="315">
+                <div>
+                    <h2>About me</h2>
+                    <p class="about-text">
+                        My name is Daniel Mauro, also known as Throndev. I am a game programmer and artist specializing in the
+                        development of both VR and non-VR games. I am passionate about creating worlds
+                        and narratives that immerse audiences in symbolism, and I strive to deliver
+                        meaningful experiences.
+                    </p>
+                    <ul class="chips">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>Unreal Engine 5</li>
+                        <li>Meta SDK</li>
+                        <li>Free-roam VR</li>
+                        <li>Interactive kiosks</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <h4 class="featured-section-title">About the project</h4>
-            <p class="featured-text">
-                A Suspense-horror, two-player coop, full body tracking & free roam VR Experience presented at Metropolitan Santiago.
-                <br><br>· For more info you can
-                <a href="https://luciddreams.cl/especiales/almas-perdidas-metropolitan/?gad_source=1&gad_campaignid=23941389007&gclid=CjwKCAjwgO7RBhBKEiwAZNP85tzHN6O8WyGX0ElPkMv0gG-pOr3XI-boBztteLAxBdbZTX7adcnzARoCs9AQAvD_BwE"
-                   target="_blank"
-                   style="color: rgba(178, 75, 209, 1); text-decoration: none;">
-                    go to site</a>
-            </p>
-
-            <h4 class="featured-section-title">My Role</h4>
-            <p class="featured-text">
-                I developed the full experience using Unity and Meta's SDKs. This experience was designed to be played by two players,
-                with the goal of finding the missing pieces of the story, allowing them to explore physically and interact with various objects to solve
-                puzzles and challenges. The player's progress is tracked by an admin app for windows that allows the operator
-                to control the game scenes and acts as a server for the multiplayer experience. The estimated duration of the game is 25 minutes, including a
-                5-minute induction explanation.
-            </p>
-
-            <h4 class="featured-section-title">Skills Applied</h4>
-            <ul class="featured-skills-list">
-                <li>Integration of Meta Movement SDK</li>
-                <li>Integration of Interaction SDK</li>
-                <li>Local Multiplayer using NGO</li>
-                <li>Spatial anchors for world alignment</li>
-                <li>VR standalone application optimization</li>
-                <li>Hand tracking rigging and setup</li>
-                <li>Audio implementation and sound design</li>
-            </ul>
-
-            <div style="text-align: center; margin-top: 1.5em;">
-                <a href="portfolio.html">
-                    <button id="viewAllProjectsBtn">View All Projects</button>
-                </a>
+<section class="grid contact section" id="contact">
+    <div class="contact-copy" data-reveal>
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaboration, or just to say hi.</p>
+    </div>
+    <div class="contact-pair">
+        <div class="bezel" data-reveal style="--i:1">
+            <div class="bezel-core contact-photos" data-crossfade>
+                <img class="is-on" src="Images/Dia2_Lolla.jpg" alt="A visitor wearing a Lucid Dreams VR headset at Lollapalooza Chile">
+                <img src="Images/LollaXPED.jpg" alt="The Banco de Chile VR stand at Lollapalooza Chile 2025" loading="lazy">
+                <img src="Images/AP_BosquePostal.jpeg" alt="The night forest from Almas Perdidas" loading="lazy">
+            </div>
+        </div>
+        <div class="bezel" data-reveal style="--i:2">
+            <div class="bezel-core contact-card">
+                <ul>
+                    <li><span>Email</span> <a class="text-link" href="mailto:danmauga@gmail.com">danmauga@gmail.com</a></li>
+                    <li><span>LinkedIn</span> <a class="text-link" href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">daniel-mauro-dev</a></li>
+                    <li><span>Instagram</span> <a class="text-link" href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">@throndev</a></li>
+                    <li><span>Itch.io</span> <a class="text-link" href="https://throndev.itch.io/" target="_blank" rel="noopener">throndev</a></li>
+                </ul>
+                <a class="button" href="mailto:danmauga@gmail.com?subject=Hello%20Throndev">Write me an email</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Game Section -->
-<section id="featuredGame">
-    <h2 id="featuredGameTitle">Featured Game</h2>
+</main>
 
-    <div id="featuredGameContent">
-        <div id="featuredGameMedia">
-            <img src="Images/quantumSolve_featured.png" alt="Quantum Solve" id="featuredGameMainImage">
-
-            <div class="featured-game-gallery">
-                <img src="Images/quantumSolve_2.png" alt="Quantum Solve Screenshot 1">
-                <img src="Images/quantumSolve_3.png" alt="Quantum Solve Screenshot 2">
-            </div>
-        </div>
-
-        <div id="featuredGameInfo">
-            <h3 class="featured-game-title">Quantum Solve</h3>
-            <p class="featured-game-period">Personal Project · 2024</p>
-
-            <div class="featured-game-tags">
-                <span class="game-tag">Puzzle</span>
-                <span class="game-tag">Exploration</span>
-                <span class="game-tag">Time-based</span>
-                <span class="game-tag">Prototype</span>
-            </div>
-
-            <h4 class="featured-game-section-title">About the Game</h4>
-            <p class="featured-game-text">
-                An exploration and restoration puzzle game where time is your greatest challenge.
-                Navigate through mysterious environments while managing the ticking clock to solve
-                intricate puzzles and restore order.
-            </p>
-
-            <h4 class="featured-game-section-title">Features</h4>
-            <ul class="featured-game-features-list">
-                <li>Time-based puzzle mechanics</li>
-                <li>Exploration-focused gameplay</li>
-                <li>Restoration and reconstruction systems</li>
-                <li>Atmospheric environments</li>
-            </ul>
-
-            <div style="text-align: center; margin-top: 1.5em;">
-                <a href="https://throndev.itch.io/quantum-solve" target="_blank" rel="noopener">
-                    <button id="playGameBtn">Play on Itch.io</button>
-                </a>
-            </div>
-
-            <div style="text-align: center; margin-top: 0.8em;">
-                <a href="games.html">
-                    <button id="viewAllGamesBtn">View All Games</button>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<br>
-
-</body>
 <footer class="footer">
-    <span>© 2026 Throndev</span>
-    <a href="https://throndev.itch.io/" target="_blank">Itch.io</a>
-    <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/throndev/" target="_blank">Instagram</a>
+    <span>Throndev, game programmer and artist</span>
+    <nav aria-label="Elsewhere">
+        <a href="https://throndev.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+        <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span class="year">© 2026 Daniel Mauro</span>
 </footer>
+
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
 </html>

@@ -1,209 +1,58 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Throndev's Portfolio</title>
-    <link rel="stylesheet" href="gameStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games · Throndev</title>
+    <meta name="description" content="Games and prototypes by Throndev, published on itch.io.">
+    <meta property="og:title" content="Games · Throndev">
+    <meta property="og:description" content="Games and prototypes by Throndev, published on itch.io.">
+    <meta property="og:image" content="https://knaddoe.github.io/Images/AP_BosquePostal.jpeg">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Images/favicon-32x32.ico">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="Images/favicon-16x16.ico">
 </head>
+
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
-<h1>Published</h1>
-<p id="gameSubtitle">Games &amp; Prototypes</p>
+<header class="nav">
+    <a class="wordmark" href="index.html">Throndev</a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="portfolio.html">Work</a>
+        <a href="games.html" aria-current="page">Games</a>
+        <a href="index.html#about">About</a>
+        <a class="button" href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<!-- FILTER BAR -->
-<div id="filterBar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="prototype">Prototype</button>
-    <button class="filter-btn" data-filter="demo">Demo</button>
-</div>
+<main id="main">
+    <div class="grid page-head">
+        <h1 data-rise>Games and prototypes</h1>
+        <p data-rise style="--i:1">Published on itch.io. Some run right in the browser. <span data-count aria-live="polite"></span></p>
+    </div>
+    <div class="filters" data-filters aria-label="Filter games"></div>
+    <div class="cards cards--4" data-render="games-index"></div>
+    <noscript><p class="empty">This list needs JavaScript. Everything is also on <a class="text-link" href="https://throndev.itch.io/">itch.io</a> and <a class="text-link" href="https://www.linkedin.com/in/daniel-mauro-dev/">LinkedIn</a>.</p></noscript>
+    <p class="outro"><a class="text-link" href="https://throndev.itch.io/" target="_blank" rel="noopener">View the full profile on itch.io</a></p>
+</main>
 
-<div id="gamesGrid">
-
-    <a class="game-card" href="https://throndev.itch.io/quantum-solve" target="_blank" rel="noopener" data-tags="prototype puzzle">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/quantumSolve_icon.png" alt="Quantum Solve">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Quantum Solve</p>
-            <p class="game-desc">Exploration and restoration while time is ticking.</p>
-            <div class="game-footer">
-                <span class="game-tag">Puzzle</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/infracto" target="_blank" rel="noopener" data-tags="prototype action">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/inFracto_icon.png" alt="inFracto">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">inFracto</p>
-            <p class="game-desc">Dark Fantasy Skill-based Bullet Hell.</p>
-            <div class="game-footer">
-                <span class="game-tag">Action</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/la-iglesia-de-la-noche" target="_blank" rel="noopener" data-tags="prototype horror">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/laIglesia_icon.png" alt="La Iglesia de la Noche">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">La Iglesia de la Noche</p>
-            <p class="game-desc">Mock-up of a more obscure type game based on a real story.</p>
-            <div class="game-footer">
-                <span class="game-tag">Horror</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/press-pective" target="_blank" rel="noopener" data-tags="demo puzzle">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/pressPective_icon.png" alt="Press-Pective">
-            <span class="card-badge">Demo</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Press-Pective</p>
-            <p class="game-desc">Superliminal-like demo in UE5.</p>
-            <div class="game-footer">
-                <span class="game-tag">Puzzle</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/untitled-hard-platform-uhp" target="_blank" rel="noopener" data-tags="demo platformer">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/uhp_icon.png" alt="Untitled Hard Platform">
-            <span class="card-badge">Demo</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Untitled Hard Platform</p>
-            <p class="game-desc">Do u think you can beat all levels? In less than an hour? Ha!</p>
-            <div class="game-footer">
-                <span class="game-tag">Platformer</span>
-                <span class="game-play-badge">▶ Play in browser</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/dis-kitchen" target="_blank" rel="noopener" data-tags="prototype action">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/disKitchen_icon.png" alt="Dis Kitchen">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Dis Kitchen</p>
-            <p class="game-desc">It's just a cooking game, but if you don't serve your customers, there will be bullet hell.</p>
-            <div class="game-footer">
-                <span class="game-tag">Action</span>
-                <span class="game-play-badge">▶ Play in browser</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/terror-project" target="_blank" rel="noopener" data-tags="prototype horror">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/belowTheSmoke_icon.png" alt="Below the Smoke">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Below the Smoke</p>
-            <p class="game-desc">Very short prototype to test the main menu load and environment shading in an eerie setting.</p>
-            <div class="game-footer">
-                <span class="game-tag">Horror</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/whisker-wars" target="_blank" rel="noopener" data-tags="prototype strategy">
-        <div style="position: relative">
-            <img class="game-thumb" src="Images/whiskerWars_icon.png" alt="Whisker Wars">
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Whisker Wars</p>
-            <p class="game-desc">Cats + TD + Minigames... Cool.</p>
-            <div class="game-footer">
-                <span class="game-tag">Strategy</span>
-                <span class="game-play-badge">▶ Play in browser</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/afterlife" target="_blank" rel="noopener" data-tags="prototype shooter">
-        <div style="position: relative">
-            <div class="game-thumb-placeholder">🎮</div>
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Afterlife</p>
-            <p class="game-desc">NO HOPE.</p>
-            <div class="game-footer">
-                <span class="game-tag">Shooter</span>
-            </div>
-        </div>
-    </a>
-
-    <a class="game-card" href="https://throndev.itch.io/fantasy-murder" target="_blank" rel="noopener" data-tags="prototype action">
-        <div style="position: relative">
-            <div class="game-thumb-placeholder">🎮</div>
-            <span class="card-badge">Prototype</span>
-        </div>
-        <div class="game-info">
-            <p class="game-title">Fantasy Murder</p>
-            <p class="game-desc">Top-Down Hotline Miami-Fantasy Styled prototype.</p>
-            <div class="game-footer">
-                <span class="game-tag">Action</span>
-            </div>
-        </div>
-    </a>
-
-</div>
-
-<div id="itchFooter">
-    <a href="https://throndev.itch.io/" target="_blank">→ View full profile on Itch.io</a>
-</div>
-
-<script>
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.game-card');
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Actualizar botón activo
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filter = btn.dataset.filter;
-
-            cards.forEach(card => {
-                const tags = card.dataset.tags || '';
-                const visible = filter === 'all' || tags.includes(filter);
-                card.classList.toggle('hidden', !visible);
-            });
-        });
-    });
-</script>
-
-</body>
 <footer class="footer">
-    <span>© 2026 Throndev</span>
-    <a href="https://throndev.itch.io/" target="_blank">Itch.io</a>
-    <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/throndev/" target="_blank">Instagram</a>
+    <span>Throndev, game programmer and artist</span>
+    <nav aria-label="Elsewhere">
+        <a href="https://throndev.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+        <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span class="year">© 2026 Daniel Mauro</span>
 </footer>
+
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
 </html>

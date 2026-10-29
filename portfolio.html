@@ -1,9 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Throndev's Portfolio</title>
-    <link rel="stylesheet" href="portfolioStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work · Throndev</title>
+    <meta name="description" content="Professional projects by Daniel Mauro (Throndev): free-roam VR experiences, public events and interactive kiosks.">
+    <meta property="og:title" content="Work · Throndev">
+    <meta property="og:description" content="Professional projects by Daniel Mauro (Throndev): free-roam VR experiences, public events and interactive kiosks.">
+    <meta property="og:image" content="https://knaddoe.github.io/Images/AP_BosquePostal.jpeg">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Images/favicon-32x32.ico">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="Images/favicon-16x16.ico">
@@ -11,453 +19,40 @@
 
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
-<h1>Portfolio</h1>
-<p id="portfolioSubtitle">professional projects & experience</p>
+<header class="nav">
+    <a class="wordmark" href="index.html">Throndev</a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="games.html">Games</a>
+        <a href="index.html#about">About</a>
+        <a class="button" href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<!-- PROJECT GRID -->
-<div id="projectsGrid">
-
-    <!-- PROJECT BLOCK (Copy n paste 4 more blocks) -->
-
-    <div class="project-card" onclick="openModal('modal-5')">
-        <img class="project-thumb" src="Images/AP_portadaMetropolitan.jpeg" alt="Almas Perdidas at Metropolitan Santiago">
-        <div class="project-info">
-            <p class="project-title">Almas Perdidas</p>
-            <p class="project-desc">Suspense-horror, free roam & local multiplayer VR Experience.</p>
-            <div class="project-footer">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">XR</span>
-                <span class="project-tag">Meta SDK</span>
-                <span class="project-tag">Public Event</span>
-                <span class="project-tag">Multiplayer</span>
-            </div>
-        </div>
+<main id="main">
+    <div class="grid page-head">
+        <h1 data-rise>Work</h1>
+        <p data-rise style="--i:1">Professional projects and experience, newest first. <span data-count aria-live="polite"></span></p>
     </div>
+    <div class="filters" data-filters aria-label="Filter projects by tag"></div>
+    <div class="cards cards--3" data-render="work-index"></div>
+    <noscript><p class="empty">This list needs JavaScript. Everything is also on <a class="text-link" href="https://throndev.itch.io/">itch.io</a> and <a class="text-link" href="https://www.linkedin.com/in/daniel-mauro-dev/">LinkedIn</a>.</p></noscript>
+    <p class="outro">Looking for the smaller things? <a class="text-link" href="games.html">See games and prototypes</a></p>
+</main>
 
-    <div class="project-card" onclick="openModal('modal-4')">
-        <img class="project-thumb" src="Images/1.JPG" alt="XPEDITION:Cerro Castillo en Plaza Gamer by Festigame">
-        <div class="project-info">
-            <p class="project-title">XPEDITION: Cerro Castillo at Festigame</p>
-            <p class="project-desc">XPEDITION VR Experience presented at Festigame Chile 2025.</p>
-            <div class="project-footer">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">XR</span>
-                <span class="project-tag">Meta SDK</span>
-                <span class="project-tag">Public Event</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" onclick="openModal('modal-3')">
-        <img class="project-thumb" src="Images/totemPpl.jpeg" alt="App Asesor Financiero">
-        <div class="project-info">
-            <p class="project-title">Asesor Financiero Scotiabank</p>
-            <p class="project-desc">Educational app for Scotiabank's branch in KidZania.</p>
-            <div class="project-footer">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">2D</span>
-                <span class="project-tag">Educational</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="project-card" onclick="openModal('modal-2')">
-        <img class="project-thumb" src="Images/Dia2_Lolla.jpg" alt="XPEDITION:Misión Espacial">
-        <div class="project-info">
-            <p class="project-title">XPEDITIONVR: Misión Espacial</p>
-            <p class="project-desc">Full body tracking & free roam VR experience at Lollapalooza.</p>
-            <div class="project-footer">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">XR</span>
-                <span class="project-tag">Meta SDK</span>
-                <span class="project-tag">Public Event</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" onclick="openModal('modal-1')">
-        <img class="project-thumb" src="Images/xped%201.jpeg" alt="XPEDITION:Cerro Castillo">
-        <div class="project-info">
-            <p class="project-title">XPEDITIONVR: Cerro Castillo</p>
-            <p class="project-desc">Full body tracking & free roam VR experience.</p>
-            <div class="project-footer">
-                <span class="project-tag">C#</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">XR</span>
-                <span class="project-tag">Meta SDK</span>
-            </div>
-        </div>
-    </div>
-    
-    
-</div>
-
-<!-- MODALES — 1 modal by project.
-     has to coincide with the desired project modal -> openModal('modal-X'). -->
-
-<!-- MODAL 1 -->
-<div class="modal-overlay" id="modal-1" onclick="closeModalOnOverlay(event, 'modal-1')">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
-
-        <h2 class="modal-title">XPEDITIONVR: Cerro Castillo</h2>
-        <p class="modal-period">Lucid Dreams · Nov 2024</p>
-
-        <div class="modal-tags">
-            <span class="project-tag">C#</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">XR</span>
-            <span class="project-tag">Meta SDK</span>
-        </div>
-
-        <h3 class="modal-section-title">About the project</h3>
-        <p class="modal-text">
-            Full body tracking & free roam VR experience aimed to work in a
-            real, physical location, aligning real world with a virtual environment
-            to generate maximum immersion.
-        </p>
-
-        <h3 class="modal-section-title">My Role</h3>
-        <p class="modal-text">
-            Using Unity, I implemented full-body tracking systems based on hand tracking and 
-            Pro Touch controllers, which were later deprecated after integrating Meta’s Movement SDK.
-            I also worked with spatial anchors for world alignment and initial setup, 
-            as well as 3D scanning of climbing holds.
-        </p>
-
-        <h3 class="modal-section-title">Skills Applied</h3>
-        <ul class="modal-skills-list">
-            <li>Integration of Meta Movement SDK</li>
-            <li>Spatial anchors for world alignment</li>
-            <li>3D scanning</li>
-            <li>VR standalone application optimization</li>
-            <li>Spline-based animation systems</li>
-            <li>Hand tracking rigging and setup</li>
-            <li>Audio implementation and sound design</li>
-        </ul>
-
-        <!-- ── MULTIMEDIA - Optional section ── -->
-        <h3 class="modal-section-title">Multimedia</h3>
-        <div class="modal-gallery">
-
-            <!-- Normal Image -->
-            <img class="modal-image" src="Images/xped%203.jpeg" alt="XPEDITION:Cerro Castillo">
-            
-            <div class="modal-gallery-video horizontal">
-                <iframe
-                        src="https://www.youtube.com/embed/D61b4_pcZlA?autoplay=1&mute=1&rel=0&loop=1&controls=0&modestbranding=1"
-                        title="Project's video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-
-            <img class="modal-image" src="Images/xped%202.jpg" alt="XPEDITION:Cerro Castillo">
-            
-            <!-- Local Video (.mp4) IF AVAILABLE IN PROJECT'S FILES
-                 controls  → show buttons: play/pause/volume
-                 muted     → starts without sound
-                 loop      → loops when finished         -->
-            <!--
-            <video class="modal-gallery-video" controls muted loop>
-                <source src="Videos/video.mp4" type="video/mp4">
-            </video>
-            -->
-
-            <!-- YOUTUBE VIDEO
-                 Copy video URL: https://www.youtube.com/watch?v=XXXXXXXX
-                 The id comes after "?v="  →  Video_ID      -->
-            <!--
-            <div class="modal-gallery-yt">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID"
-                    title="Project's video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
-        </div>
-    </div>
-</div>
-
-
-<!-- MODAL 2 -->
-<div class="modal-overlay" id="modal-2" onclick="closeModalOnOverlay(event, 'modal-2')">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
-
-        <h2 class="modal-title">XPEDITIONVR: Misión Espacial</h2>
-        <p class="modal-period">Lucid Dreams · Mar 2025</p>
-
-        <div class="modal-tags">
-            <span class="project-tag">C#</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">XR</span>
-            <span class="project-tag">Meta SDK</span>
-        </div>
-
-        <h3 class="modal-section-title">About the project</h3>
-        <p class="modal-text">
-            Full body tracking & free roam VR experience in collaboration with
-            Banco de Chile, presented at the VIP Zone at Lollapalooza Chile 2025.
-        </p>
-
-        <h3 class="modal-section-title">My Role</h3>
-        <p class="modal-text">
-            Using Unity, I implemented full-body tracking systems based on hand tracking
-            while integrating Meta’s Movement SDK. I also worked with spatial anchors for 
-            world alignment and connected vibration motors through a local network.
-        </p>
-
-        <h3 class="modal-section-title">Skills Applied</h3>
-        <ul class="modal-skills-list">
-            <li>Integration of Meta Movement SDK</li>
-            <li>Spatial anchors for world alignment</li>
-            <li>VR standalone application optimization</li>
-            <li>Spline-based animation systems</li>
-            <li>Hand tracking rigging and setup</li>
-            <li>Audio implementation and sound design</li>
-        </ul>
-
-        <!-- ── MULTIMEDIA - Optional section ── -->
-        <h3 class="modal-section-title">Multimedia</h3>
-        <div class="modal-gallery">
-
-            <!-- Normal Image -->
-            <img class="modal-image" src="Images/LollaXPED.jpg" alt="XPEDITION:Misión Espacial">
-
-            <div class="modal-gallery-video horizontal">
-                <iframe
-                        src="https://player.vimeo.com/video/1076230232?h=202d7baee8&autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&loop=1"
-                        frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-
-            <img class="modal-image" src="Images/In-Editor_SpaceXped.jpg" alt="XPEDITION:Misión Espacial">
-        </div>
-    </div>
-</div>
-
-<!-- MODAL 3 -->
-<div class="modal-overlay" id="modal-3" onclick="closeModalOnOverlay(event, 'modal-3')">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
-
-        <h2 class="modal-title">Asesor Financiero Scotiabank</h2>
-        <p class="modal-period">Independent · Jan 2025</p>
-
-        <div class="modal-tags">
-            <span class="project-tag">C#</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">2D</span>
-            <span class="project-tag">Educational</span>
-        </div>
-
-        <h3 class="modal-section-title">About the project</h3>
-        <p class="modal-text">
-            An educational application for KidZania designed to teach children 
-            the basics of financial literacy through interactive experiences.
-        </p>
-
-        <h3 class="modal-section-title">My Role</h3>
-        <p class="modal-text">
-            Full development of an application for an interactive kiosk installed at
-            the Scotiabank branch in KidZania. Developed in Unity, including animation,
-            UI design and implementation, a virtual keyboard system, and email delivery of the
-            player's profile.
-        </p>
-
-        <h3 class="modal-section-title">Skills Applied</h3>
-        <ul class="modal-skills-list">
-            <li>UI/UX design and interface systems</li>
-            <li>Interactive Kiosk development</li>
-            <li>Virtual input systems</li>
-            <li>Player data management</li>
-        </ul>
-
-        <!-- ── MULTIMEDIA - Optional section ── -->
-        <h3 class="modal-section-title">Multimedia</h3>
-        <div class="modal-gallery">
-
-            <!-- Normal Image -->
-            <img class="modal-image" src="Images/inside%20app.jpg" alt="Asesor Financiero Scotiabank">
-            <img class="modal-image" src="Images/totemApp.jpg" alt="Asesor Financiero Scotiabank">
-            <img class="modal-image" src="Images/inside%20app2.jpg" alt="Asesor Financiero Scotiabank">
-        </div>
-    </div>
-</div>
-
-
-<!-- MODAL 4 -->
-<div class="modal-overlay" id="modal-4" onclick="closeModalOnOverlay(event, 'modal-4')">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal('modal-4')">✕</button>
-
-        <h2 class="modal-title">XPEDITIONVR: Cerro Castillo At Festigame</h2>
-        <p class="modal-period">Lucid Dreams · Oct 2025</p>
-
-        <div class="modal-tags">
-            <span class="project-tag">C#</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">XR</span>
-            <span class="project-tag">Meta SDK</span>
-        </div>
-
-        <h3 class="modal-section-title">About the project</h3>
-        <p class="modal-text">
-            Full body tracking & free roam VR experience in collaboration with
-            Caja los Andes, presented at Festigame Chile 2025.
-        </p>
-
-        <h3 class="modal-section-title">My Role</h3>
-        <p class="modal-text">
-            I Adapted "XPEDITION: Cerro Castillo" project for a public showcase at Festigame, redesigning parts of the
-            scene layout, game duration and integrating sponsor branding to meet the event’s requirements.
-        </p>
-
-        <h3 class="modal-section-title">Skills Applied</h3>
-        <ul class="modal-skills-list">
-            <li>Integration of Meta Movement SDK</li>
-            <li>Spatial anchors for world alignment</li>
-            <li>VR standalone application optimization</li>
-            <li>Spline-based animation systems</li>
-            <li>Hand tracking rigging and setup</li>
-            <li>Audio implementation and sound design</li>
-        </ul>
-
-        <!-- ── MULTIMEDIA - Optional section ── -->
-        <h3 class="modal-section-title">Multimedia</h3>
-        <div class="modal-gallery">
-
-            <!-- Normal Image -->
-            <img class="modal-image" src="Images/xped%20festigame%201.JPG" alt="XPEDITION:Cerro Castillo at Festigame">
-
-            <video class="modal-gallery-video vertical" autoplay muted loop>
-                <source src="Videos/festigameXped.mp4" type="video/mp4">
-            </video>
-
-            <img class="modal-image" src="Images/2.JPG" alt="XPEDITION:Cerro Castillo at Festigame">
-        </div>
-    </div>
-</div>
-
-<!-- MODAL 5 -->
-<div class="modal-overlay" id="modal-5" onclick="closeModalOnOverlay(event, 'modal-5')">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal('modal-5')">✕</button>
-
-        <h2 class="modal-title">Almas Perdidas</h2>
-        <p class="modal-period">Lucid Dreams · Jun 2026</p>
-
-        <div class="modal-tags">
-            <span class="project-tag">C#</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">XR</span>
-            <span class="project-tag">Meta SDK</span>
-            <span class="project-tag">Public Event</span>
-            <span class="project-tag">Multiplayer</span>
-        </div>
-
-        <h3 class="modal-section-title">About the project</h3>
-        <p class="modal-text">
-            A Suspense-horror, two-player coop, full body tracking & free roam VR Experience presented at Metropolitan Santiago.
-            <br><br>· For more info you can 
-            <a href="https://luciddreams.cl/especiales/almas-perdidas-metropolitan/?gad_source=1&gad_campaignid=23941389007&gclid=CjwKCAjwgO7RBhBKEiwAZNP85tzHN6O8WyGX0ElPkMv0gG-pOr3XI-boBztteLAxBdbZTX7adcnzARoCs9AQAvD_BwE"
-            target="_blank"
-            style="color: rgba(178, 75, 209, 1); text-decoration: none;">
-                go to site</a>
-        </p>
-
-        <h3 class="modal-section-title">My Role</h3>
-        <p class="modal-text">
-            I developed the full experience using Unity and Meta's SDKs. This experience was designed to be played by two players,
-            with the goal of finding the missing pieces of the story, allowing them to explore physically and interact with various objects to solve
-            puzzles and challenges. The player's progress is tracked by an admin app for windows that allows the operator
-            to control the game scenes and acts as a server for the multiplayer experience. The estimated duration of the game is 25 minutes, including a 
-            5-minute induction explanation.
-        </p>
-
-        <h3 class="modal-section-title">Skills Applied</h3>
-        <ul class="modal-skills-list">
-            <li>Integration of Meta Movement SDK</li>
-            <li>Integration of Interaction SDK</li>
-            <li>Local Multiplayer using NGO</li>
-            <li>Spatial anchors for world alignment</li>
-            <li>VR standalone application optimization</li>
-            <li>Hand tracking rigging and setup</li>
-            <li>Audio implementation and sound design</li>
-        </ul>
-
-        <!-- ── MULTIMEDIA - Optional section ── -->
-        <h3 class="modal-section-title">Multimedia</h3>
-        <div class="modal-gallery">
-
-            <!-- Normal Image -->
-            <img class="modal-image" src="Images/AP_BosquePostal.jpeg" alt="Almas Perdidas: Forest">
-
-            <video class="modal-gallery-video horizontal" autoplay muted loop>
-                <source src="Videos/AP_SneakPeek.mp4" type="video/mp4">
-            </video>
-
-            <img class="modal-image" src="Images/AP_pasilloPadre.jpg" alt="Almas Perdidas: Father's Hallway">
-            <img class="modal-image" src="Images/AP_piezaHija.jpeg" alt="Almas Perdidas: Daguther's Bedroom">
-            
-        </div>
-    </div>
-</div>
-
-<script>
-    function openModal(id) {
-        const modal = document.getElementById(id);
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // evita scroll del fondo
-    }
-
-    function closeModal(id) {
-        const modal = document.getElementById(id);
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    // Closes if outside the block was pressed
-    function closeModalOnOverlay(event, id) {
-        if (event.target === event.currentTarget) {
-            closeModal(id);
-        }
-    }
-
-    // Closes with Esc key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-    });
-</script>
-
-</body>
 <footer class="footer">
-    <span>© 2026 Throndev</span>
-    <a href="https://throndev.itch.io/" target="_blank">Itch.io</a>
-    <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/throndev/" target="_blank">Instagram</a>
+    <span>Throndev, game programmer and artist</span>
+    <nav aria-label="Elsewhere">
+        <a href="https://throndev.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+        <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span class="year">© 2026 Daniel Mauro</span>
 </footer>
+
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
 </html>

@@ -1,9 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Throndev's Contact</title>
-    <link rel="stylesheet" href="contactStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact · Throndev</title>
+    <meta name="description" content="Get in touch with Daniel Mauro (Throndev).">
+    <meta property="og:title" content="Contact · Throndev">
+    <meta property="og:description" content="Get in touch with Daniel Mauro (Throndev).">
+    <meta property="og:image" content="https://knaddoe.github.io/Images/AP_BosquePostal.jpeg">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Images/favicon-32x32.ico">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="Images/favicon-16x16.ico">
@@ -11,33 +19,59 @@
 
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
-<h1>Contact</h1>
-<p id="contactSubtitle">Let's talk!</p>
+<header class="nav">
+    <a class="wordmark" href="index.html">Throndev</a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="portfolio.html">Work</a>
+        <a href="games.html">Games</a>
+        <a href="index.html#about">About</a>
+        <a class="button" href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<div id="contactForm">
-    <p id="contactSimpleText">
-        Social Media:<br><br>
-        <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank">LinkedIn</a> | 
-        <a href="https://www.instagram.com/throndev/" target="_blank">Instagram</a>
-        <br><br>
-        Email: 
-        <a href="mailto:danmauga@gmail.com">Gmail</a>
-    </p>
-    
-</div>
+<main id="main">
 
-</body>
+<section class="grid contact contact--page" id="contact">
+    <div class="contact-copy" data-reveal>
+        <h1>Contact</h1>
+        <p>Feel free to reach out for collaboration, or just to say hi.</p>
+    </div>
+    <div class="contact-pair">
+        <div class="bezel" data-reveal style="--i:1">
+            <div class="bezel-core contact-photos" data-crossfade>
+                <img class="is-on" src="Images/Dia2_Lolla.jpg" alt="A visitor wearing a Lucid Dreams VR headset at Lollapalooza Chile">
+                <img src="Images/LollaXPED.jpg" alt="The Banco de Chile VR stand at Lollapalooza Chile 2025" loading="lazy">
+                <img src="Images/AP_BosquePostal.jpeg" alt="The night forest from Almas Perdidas" loading="lazy">
+            </div>
+        </div>
+        <div class="bezel" data-reveal style="--i:2">
+            <div class="bezel-core contact-card">
+                <ul>
+                    <li><span>Email</span> <a class="text-link" href="mailto:danmauga@gmail.com">danmauga@gmail.com</a></li>
+                    <li><span>LinkedIn</span> <a class="text-link" href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">daniel-mauro-dev</a></li>
+                    <li><span>Instagram</span> <a class="text-link" href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">@throndev</a></li>
+                    <li><span>Itch.io</span> <a class="text-link" href="https://throndev.itch.io/" target="_blank" rel="noopener">throndev</a></li>
+                </ul>
+                <a class="button" href="mailto:danmauga@gmail.com?subject=Hello%20Throndev">Write me an email</a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
 <footer class="footer">
-    <span>© 2026 Throndev</span>
-    <a href="https://throndev.itch.io/" target="_blank">Itch.io</a>
-    <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/throndev/" target="_blank">Instagram</a>
+    <span>Throndev, game programmer and artist</span>
+    <nav aria-label="Elsewhere">
+        <a href="https://throndev.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+        <a href="https://www.linkedin.com/in/daniel-mauro-dev/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/throndev/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span class="year">© 2026 Daniel Mauro</span>
 </footer>
+
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
 </html>
